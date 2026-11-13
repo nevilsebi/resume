@@ -1,0 +1,358 @@
+/* Color variables and box sizing */
+:root {
+  --bg-color: #FAF9F6;
+  --card-bg: #FFFFFF;
+  --text-main: #18181B;
+  --text-light: #52525B;
+  --line-color: #D4D4D8;
+  --accent-color: #C2410C;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* General page and typography styles */
+body {
+  margin: 0;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  color: var(--text-main);
+  line-height: 1.15;
+}
+
+h1 {
+  font-size: 3.35rem;
+  margin: 0 0 18px 0;
+  letter-spacing: -0.03em;
+}
+
+h1 em {
+  color: var(--accent-color);
+  font-style: italic;
+}
+
+h2 {
+  font-size: 1.75rem;
+  margin: 48px 0 24px 0;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin: 0 0 8px 0;
+}
+
+p, li {
+  max-width: 640px;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+a:focus-visible,
+.btn:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 3px;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* Top navigation bar */
+.top-bar {
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--line-color);
+}
+
+.navbar {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 8px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+
+.logo {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--text-main);
+  text-decoration: none;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.dot {
+  color: var(--accent-color);
+}
+
+.nav-menu {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-item {
+  color: var(--text-main);
+  text-decoration: none;
+  font-weight: 500;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-item:hover {
+  color: var(--accent-color);
+}
+
+/* Hero intro section */
+#hero {
+  padding: 48px 0 24px 0;
+}
+
+.name-label {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0 0 12px 0;
+}
+
+.subtitle {
+  color: var(--text-light);
+  font-weight: 500;
+  margin: 0 0 24px 0;
+}
+
+/* Buttons and action links */
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 20px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid var(--accent-color);
+}
+
+.btn-main {
+  background-color: var(--accent-color);
+  color: var(--card-bg);
+}
+
+.btn-main:hover {
+  background-color: #9A3412;
+  border-color: #9A3412;
+}
+
+.btn-outline {
+  background-color: var(--card-bg);
+  color: var(--accent-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--bg-color);
+}
+
+.jump-link {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  font-weight: 500;
+}
+
+/* Experience and education cards */
+.grid-two {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--line-color);
+  padding: 24px;
+}
+
+.card-meta {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin: 0 0 16px 0;
+}
+
+.card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.card li + li {
+  margin-top: 8px;
+}
+
+.edu-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Printable paper resume section */
+#resume {
+  background-color: var(--card-bg);
+  border: 1px solid var(--line-color);
+  padding: 40px;
+  margin: 48px 0;
+}
+
+.resume-top {
+  border-bottom: 1px solid var(--line-color);
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+
+.resume-top h2 {
+  margin: 0 0 4px 0;
+  font-size: 1.5rem;
+}
+
+.resume-info,
+.resume-summary {
+  margin: 0 0 16px 0;
+  font-size: 0.95rem;
+  max-width: 100%;
+}
+
+.resume-section {
+  margin-top: 20px;
+}
+
+.resume-section h3 {
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--line-color);
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+}
+
+.entry {
+  margin-bottom: 14px;
+}
+
+.entry-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  font-size: 0.95rem;
+}
+
+.entry ul,
+.resume-list {
+  margin: 6px 0 0 0;
+  padding-left: 18px;
+  font-size: 0.92rem;
+}
+
+.entry li,
+.resume-list li {
+  max-width: 100%;
+  margin-bottom: 4px;
+}
+
+/* Footer contact section */
+#contact {
+  background-color: var(--card-bg);
+  border-top: 1px solid var(--line-color);
+  padding: 40px 24px;
+}
+
+.contact-box {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+#contact h2 {
+  margin-top: 0;
+}
+
+/* Mobile responsive rules */
+@media (max-width: 700px) {
+  h1 {
+    font-size: 2.3rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .grid-two {
+    grid-template-columns: 1fr;
+  }
+
+  .entry-top {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  #resume {
+    padding: 24px;
+  }
+}
+
+/* A4 print rules for resume */
+@media print {
+  .top-bar,
+  #hero,
+  #experience,
+  #credentials,
+  #contact {
+    display: none;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: #000000;
+    font-size: 10pt;
+    line-height: 1.35;
+  }
+
+  main,
+  #resume {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+
+  #resume h2,
+  #resume h3,
+  #resume p,
+  #resume li,
+  #resume span,
+  #resume strong,
+  #resume a {
+    color: #000000;
+  }
+}
